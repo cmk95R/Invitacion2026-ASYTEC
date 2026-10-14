@@ -383,5 +383,4 @@ footer .logo-img { width: clamp(120px, 28vw, 180px); }
   .btn { transition: none; }
   .hero { background-attachment: scroll; }
   .countdown div.tick { animation: none; }
-  .envelope-overlay { display: none; }
 }

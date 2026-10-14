@@ -1,5 +1,4 @@
 import "./globals.css";
-import EnvelopeIntro from "../components/EnvelopeIntro";
 
 export const metadata = {
   title: "Fiesta de Fin de Año · ASYTEC Sistemas",
@@ -28,10 +27,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>
-        <EnvelopeIntro />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
