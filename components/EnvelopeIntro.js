@@ -3,14 +3,24 @@
 import { useEffect, useRef, useState } from 'react';
 import { EVENT, EVENT_DATE } from '../lib/config';
 
-const CONFETTI = Array.from({ length: 30 }, (_, index) => ({
+const CONFETTI_COLORS = [
+  '#ffd043',
+  '#f3c85c',
+  '#ffe885',
+  '#e5b225',
+  '#fff0a6',
+  '#ffd043',
+  '#f15a24',
+];
+
+const CONFETTI = Array.from({ length: 54 }, (_, index) => ({
   id: index,
   x: (index * 37 + 11) % 100,
   drift: ((index * 29) % 90) - 45,
   delay: ((index * 7) % 13) / 20,
   duration: 2.15 + ((index * 11) % 15) / 10,
   size: 4 + ((index * 5) % 6),
-  color: ['#ffd043', '#f3c85c', '#fff0a6', '#ffffff', '#f15a24'][index % 5],
+  color: CONFETTI_COLORS[index % CONFETTI_COLORS.length],
 }));
 
 export default function EnvelopeIntro({ onReveal, onReplay }) {
