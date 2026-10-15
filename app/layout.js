@@ -1,9 +1,40 @@
 import "./globals.css";
 
+const siteUrl = "https://invitacion2026-asytec-sistemas.netlify.app";
+const socialImage = "/og-invitacion-captura.jpg";
+
 export const metadata = {
-  title: "Fiesta de Fin de Año · ASYTEC Sistemas",
+  metadataBase: new URL(siteUrl),
+  title: "Invitación ASYTEC · Fiesta de Fin de Año",
   description:
-    "Fiesta de Fin de Año ASYTEC Sistemas. 11 de noviembre, Fontana Bar, Núñez. 19:00 a 22:00.",
+    "Abrí el sobre para descubrir los detalles de la Fiesta de Fin de Año de ASYTEC Sistemas.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Invitación ASYTEC · Fiesta de Fin de Año",
+    description:
+      "Abrí el sobre para descubrir los detalles del evento.",
+    url: siteUrl,
+    siteName: "ASYTEC Sistemas",
+    locale: "es_AR",
+    type: "website",
+    images: [
+      {
+        url: socialImage,
+        width: 1200,
+        height: 630,
+        alt: "Sobre de invitación de ASYTEC Sistemas",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Invitación ASYTEC · Fiesta de Fin de Año",
+    description:
+      "Abrí el sobre para descubrir los detalles del evento.",
+    images: [socialImage],
+  },
 };
 
 export const viewport = {
