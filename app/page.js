@@ -14,6 +14,9 @@ import {
   TEAM_PHOTOS,
 } from "../lib/config";
 
+import EnvelopeIntro from '../components/EnvelopeIntro';
+import { useState } from 'react';
+
 const fadeUp = {
   initial: { opacity: 0, y: 28 },
   whileInView: { opacity: 1, y: 0 },
@@ -22,8 +25,22 @@ const fadeUp = {
 };
 
 export default function Home() {
+  const [invitationOpen, setInvitationOpen] = useState(false);
+
   return (
     <main>
+      <EnvelopeIntro
+        onReveal={() => setInvitationOpen(true)}
+        onReplay={() => setInvitationOpen(false)}
+      />
+
+      {invitationOpen && (
+        <motion.div
+          className='invitation-content'
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
+        >
       <motion.header
         className="hero"
         style={{ backgroundImage: `url(${HERO_IMAGE})` }}
@@ -114,6 +131,8 @@ export default function Home() {
       <motion.footer {...fadeUp}>
         <Logo />
       </motion.footer>
+        </motion.div>
+      )}
     </main>
   );
 }
