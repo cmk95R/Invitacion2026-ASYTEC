@@ -376,7 +376,11 @@ section { padding: clamp(40px, 8vw, 88px) var(--gutter); text-align: center; }
 .team .grid img { width: 100%; height: auto; display: block; }
 
 footer { background: var(--navy-deep); padding: clamp(20px, 4vw, 36px) var(--gutter); text-align: center; color: var(--white); display: flex; justify-content: center; align-items: center; }
-footer .logo-img { width: clamp(120px, 28vw, 180px); }
+footer .logo-img {
+  width: clamp(120px, 28vw, 180px);
+  opacity: 1;
+  transform: none;
+}
 
 /* Apertura de la invitación */
 .intro-overlay {

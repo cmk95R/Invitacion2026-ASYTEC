@@ -128,9 +128,9 @@ export default function Home() {
         </div>
       </motion.section>
 
-      <motion.footer {...fadeUp}>
-        <Logo />
-      </motion.footer>
+      <footer>
+        <Logo initial={false} />
+      </footer>
         </motion.div>
       )}
     </main>
