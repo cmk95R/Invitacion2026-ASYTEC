@@ -109,7 +109,12 @@ section { padding: clamp(40px, 8vw, 88px) var(--gutter); text-align: center; }
   margin: 22px auto 24px;
 }
 .event-details dd { margin-top: 3px; font-weight: 600; }
-.event-details dd.script { color: var(--gold); font-size: clamp(2.2rem, 8vw, 3.4rem); line-height: 1.1; }
+.event-details dd.script {
+  color: var(--gold);
+  font-size: clamp(2.4rem, 10vw, 4rem);
+  line-height: 1.4;
+  font-weight: 400;
+}
 
 /* Cuenta regresiva */
 .countdown {
