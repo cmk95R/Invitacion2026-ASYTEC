@@ -67,6 +67,16 @@ export default function Home() {
           <h2 className="script">{EVENT.dateLabel}</h2>
           <p className="venue">{EVENT.venue}</p>
           <p className="addr">{EVENT.address}</p>
+          <dl className="event-details">
+            <div>
+              <dt>Horario</dt>
+              <dd className="script">{EVENT.hours}</dd>
+            </div>
+            <div>
+              <dt>Vestimenta</dt>
+              <dd>{EVENT.dress}</dd>
+            </div>
+          </dl>
           <a
             className="btn btn--ghost"
             href={MAP_URL}
@@ -93,14 +103,6 @@ export default function Home() {
             </figure>
           ))
         )}
-      </motion.section>
-
-      <motion.section className="time" {...fadeUp}>
-        <div className="wrap">
-          <p>En el siguiente horario:</p>
-          <p className="hours script">{EVENT.hours}</p>
-          <p>{EVENT.dress}</p>
-        </div>
       </motion.section>
 
       <motion.section className="reminder" {...fadeUp}>
